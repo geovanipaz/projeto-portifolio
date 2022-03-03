@@ -6,7 +6,7 @@ def home(request):
 
 def about(request):
     data = 'qualquer dado'
-    return HttpResponse(data)
+    return render(request, 'about.html')
 
 def contact(request):
-    return HttpResponse("it's your contact page")
+    return render(request, 'contact.html')
