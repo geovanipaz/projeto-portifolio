@@ -2,7 +2,13 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 def home(request):
-    return render(request,'index.html')
+    text = {
+        'name':'Geovani',
+        'age':30,
+        'phone': 2342445,
+        'friend_name': ['fabio','Nam','Jhonatan']
+    }
+    return render(request,'index.html', text)
 
 def about(request):
     data = 'qualquer dado'
