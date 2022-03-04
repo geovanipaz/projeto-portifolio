@@ -2,7 +2,7 @@
 
 {% block title %}
   Its Home Page
-{% endblock title %}
+{% endblock %}
 
 
 
@@ -11,9 +11,9 @@
 {% include 'slider.html' %}
 <div class="jumbotron">
   <h1 class="text-center">Home Page</h1>
-  <p>Nome: {{ name }}</p>
-  <p>Idade: {{ age }}</p>
-  <p>Telefone: {{ phone }}</p>
+    <p>Nome: {{ name }}</p>
+    <p>Idade: {{ age }}</p>
+    <p>Telefone: {{ phone }}</p>
 
   <ul class="list">
     {% for row in friend_name %}
