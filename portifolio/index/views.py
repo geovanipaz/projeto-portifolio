@@ -1,19 +1,21 @@
 from django.shortcuts import render
-from .models import about
+from .models import about, slider
 
 # Create your views here.
 
 def home(request):
-    aboutdata = about.objects.all()
+    aboutdata = about.objects.all()[0]
+    sliderdata = slider.objects.all()
     context = {
-        'about':aboutdata
+        'about':aboutdata,
+        'slider': sliderdata
     }
     return render(request,'index.html', context)
 
-def about(request):
+def aboutus(request):
     
     
     return render(request, 'about.html')
 
-def contact(request):
+def contactus(request):
     return render(request, 'contact.html')
