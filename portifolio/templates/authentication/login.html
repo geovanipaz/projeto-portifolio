@@ -53,13 +53,13 @@
                 <input type="password" name="password" class="form-control" 
                 id="name" placeholder="Your Password" />
                 <div class="validate"></div><br>
-                <small>Forget my <a href="">Password</a></small>
+                <small>Forget my <a href="{% url 'forgetpassword' %}">Password</a></small>
               
             <div class="text-center">
             <button class="btn btn-success" type="submit">Login</button>
           </div>
         </form>
-        <small>Don't have a account <a href="">Register Now</a></small>
+        <small>Don't have a account <a href="{% url 'registration'%}">Register Now</a></small>
       </div>
 
     </div>
