@@ -38,7 +38,20 @@
 
     <div class="row mt-5 justify-content-center" data-aos="fade-up">
       <div class="col-lg-4">
-          <h2>Login Your Account</h2>
+        <h2>Login Your Account</h2>
+
+        {% for message in messages %}
+          <div class="alert {{message.tags}} alert-dismissable" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            {{message}}
+          </div>
+        {% endfor %}
+
+
+
+
         <form action="" method="post">
           {% csrf_token %}
           <div class="form-group">
